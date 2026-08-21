@@ -4,7 +4,7 @@ Tools for preparing photographed sewing patterns in Inkscape and creating printa
 
 ## Contents
 
-- `MifoilExtensions/` - Inkscape extensions for perspective correction, scale detection, pattern tracing, and marking detection.
+- `Milfoil Extensions/` - Inkscape extensions for perspective correction, scale detection, pattern tracing, and marking detection.
 - `Tiling Template Generator A0 A4/` - standalone generator for SVG tile-guide templates.
 
 ## Milfoil Inkscape Extensions
@@ -41,7 +41,7 @@ The Inkscape-facing files use Inkscape's built-in Python environment. Image proc
 
 3. In Inkscape, open `Edit > Preferences > System` and locate **User extensions**. Open that folder.
 
-4. Copy the complete contents of `MifoilExtensions/` into the User extensions folder. Keep each worker file in its matching `workers/` or `Workers/` subfolder.
+4. Copy the complete contents of `Milfoil Extensions/` into the User extensions folder. Keep each worker file in its matching `workers/` or `Workers/` subfolder.
 
 5. Restart Inkscape. The extensions are available under `Extensions > Milfoil`:
 
@@ -117,4 +117,4 @@ The generated guide assumes adjacent tiles do not overlap. Any overlap for tapin
 - **Extension missing from the menu**: confirm each `.inx` file has its matching `.py` file, check Inkscape's extension error log, and verify file permissions.
 - **Text detected as circular markings**: verify that both `pytesseract` and the `tesseract` command are installed. OCR is used to mask text before circle detection.
 
-For the full installation notes, see [MifoilExtensions/INSTALL.md](MifoilExtensions/INSTALL.md).
+For the full installation notes, see [Milfoil Extensions/INSTALL.md](Milfoil%20Extensions/INSTALL.md).
