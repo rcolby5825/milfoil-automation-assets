@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <name>Milfoil: Trace Pattern Pieces</name>
+  <id>org.milfoil.trace_pieces</id>
+  <param name="threshold" type="int" min="0" max="255" gui-text="B/W threshold (0-255, higher = more sensitive to faint lines)">128</param>
+  <param name="label_prefix" type="string" gui-text="Only trace images whose label/ID starts with (try 'image' for un-labeled default imports)">src_</param>
+  <param name="fill_solid" type="bool" gui-text="Fill traced shape solid black (unchecked = border only, recommended so you can see through it to add text/reference)">false</param>
+  <param name="border_width" type="int" min="1" max="20" gui-text="Border thickness (whole number, used when not filling solid)">1</param>
+  <param name="isolate_paper" type="bool" gui-text="Isolate pattern piece(s) from mat/grid automatically (GrabCut segmentation, seeded by brightness — recommended, handles multiple pieces per photo)">true</param>
+  <param name="paper_brightness" type="int" min="0" max="255" gui-text="Paper brightness threshold (used to auto-locate each piece before refining its edges — raise if mat/shadow still getting picked up)">100</param>
+  <param name="venv_python" type="string" gui-text="Worker Python path (see INSTALL.md)">~/milfoil_env/bin/python3</param>
+  <effect>
+    <object-type>all</object-type>
+    <effects-menu>
+      <submenu name="Milfoil"/>
+    </effects-menu>
+  </effect>
+  <script>
+    <command location="inx" interpreter="python">milfoil_trace_pieces.py</command>
+  </script>
+</inkscape-extension>

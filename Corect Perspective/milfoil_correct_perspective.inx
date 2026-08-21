@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <name>Milfoil: Correct Perspective</name>
+  <id>org.milfoil.correct_perspective</id>
+  <param name="confidence_threshold" type="float" min="1.0" max="15.0" precision="1" gui-text="Confidence threshold in degrees (lower = stricter, refuses more often)">4.0</param>
+  <param name="force" type="bool" gui-text="Force correction even when confidence check fails (not recommended — review results carefully)">false</param>
+  <param name="venv_python" type="string" gui-text="Worker Python path (see INSTALL.md)">~/milfoil_env/bin/python3</param>
+  <effect>
+    <object-type>all</object-type>
+    <effects-menu>
+      <submenu name="Milfoil"/>
+    </effects-menu>
+  </effect>
+  <script>
+    <command location="inx" interpreter="python">milfoil_correct_perspective.py</command>
+  </script>
+</inkscape-extension>
